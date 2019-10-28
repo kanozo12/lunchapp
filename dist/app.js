@@ -90,10 +90,22 @@
 /*!********************!*\
   !*** ./src/app.js ***!
   \********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var electron__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! electron */ \"electron\");\n/* harmony import */ var electron__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(electron__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\nwindow.addEventListener(\"load\", ()=>{\r\n    let btn = document.querySelector(\"#load\");\r\n    let target = document.querySelector(\"#list\");\r\n    \r\n    btn.addEventListener(\"click\", ()=>{\r\n        console.log(btn);\r\n        let list = electron__WEBPACK_IMPORTED_MODULE_0__[\"ipcRenderer\"].sendSync(\"loadData\");\r\n        console.log(list);\r\n        list.forEach( x => {\r\n            let li = document.createElement(\"li\");\r\n            li.innerHTML = x;\r\n            target.appendChild(li);\r\n        });\r\n    });\r\n});\r\n\r\n//일렉트론을 사용한 데스크탑 어플리케이션 개발\r\n//실제 사용가능한 수준의 어플리케이션\n\n//# sourceURL=webpack:///./src/app.js?");
+
+/***/ }),
+
+/***/ "electron":
+/*!***************************!*\
+  !*** external "electron" ***!
+  \***************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("\n\n//# sourceURL=webpack:///./src/app.js?");
+eval("module.exports = require(\"electron\");\n\n//# sourceURL=webpack:///external_%22electron%22?");
 
 /***/ })
 
